@@ -8,6 +8,10 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#000000" />
+          <script
+            src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"
+          ></script>
         </Head>
         <body className="text-blueGray-700 antialiased">
           <div id="page-transition"></div>

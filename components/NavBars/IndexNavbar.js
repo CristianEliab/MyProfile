@@ -3,6 +3,7 @@ import Logo from "../Icons/Logo";
 
 // import the icons you need
 import GitHub from "../Icons/GitHub";
+import Linkedin from "../Icons/Linkedin";
 
 export default function Navbar({ user }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -14,7 +15,6 @@ export default function Navbar({ user }) {
   });
 
   const handleScroll = () => {
-    console.log("scroll event", window.scrollY);
     if (window.scrollY > 20) {
       setUpdateNav(true);
     } else {
@@ -27,7 +27,7 @@ export default function Navbar({ user }) {
       <nav
         className={
           updateNav
-            ? "top-0 left-0 fixed z-10 w-full flex flex-wrap items-center justify-between p-4 navbar-expand-lg bg-white shadow"
+            ? "top-0 left-0 fixed z-10 w-full flex flex-wrap items-center justify-between p-4 navbar-expand-lg bg-white shadow transition-all ease-out"
             : "top-0 left-0 fixed z-10 w-full flex flex-wrap items-center justify-between p-4 navbar-expand-lg bg-blue-800"
         }
       >
@@ -35,7 +35,7 @@ export default function Navbar({ user }) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="logo-title">
               <Logo width="24" fill={updateNav ? "#000" : "#fff"} />
-              <p>Hi I'm Eliab</p>
+              <p className="font-bold">Hi I'm Eliab</p>
             </div>
           </div>
           <div
@@ -46,9 +46,14 @@ export default function Navbar({ user }) {
             id="example-navbar-warning"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
+              <li className="flex items-center mx-2">
                 <a href="https://github.com/CristianEliab">
-                  <GitHub fill="#000" width={24} height={24}></GitHub>
+                  <GitHub fill="#000" width={46} height={46}></GitHub>
+                </a>
+              </li>
+              <li className="flex items-center mx-2">
+                <a href="https://linkedin.com/in/cristian-eliab">
+                  <Linkedin></Linkedin>
                 </a>
               </li>
             </ul>
